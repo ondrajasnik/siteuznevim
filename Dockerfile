@@ -1,21 +1,21 @@
-# Use the official Python base image
+# Použij oficiální základní image Pythonu
 FROM python:3.10-slim
 
-# Set the working directory in the container
+# Nastav pracovní adresář v kontejneru
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+# Zkopíruj obsah aktuálního adresáře do kontejneru na /app
+COPY . .
 
-# Install the necessary dependencies
+# Nainstaluj potřebné závislosti
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose the port Flask will run on
+# Otevři port, na kterém poběží Flask
 EXPOSE 5000
 
-# Set environment variable to indicate the app is in production mode
+# Nastav proměnné prostředí pro produkční režim aplikace
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-# Run the Flask app in development mode
+# Spusť Flask aplikaci v režimu vývoje
 CMD ["flask", "run"]
