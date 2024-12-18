@@ -1,28 +1,22 @@
 # JasnikSite
-# JasnikSite
 
 Tento projekt je jednoduchá webová aplikace postavená na Flask frameworku, která umožňuje správu uživatelů.
 
 ## Požadavky
 
-  requirements.txt
+  pip install -r requirements.txt
 
 ## Instalace
 
 1. Naklonujte repozitář:
     ```sh
-    git clone https://github.com/vase-uzivatelske-jmeno/jasnikSite.git
+    git clone https://github.com/ondrajasnik/siteuznevim
     ```
-2. Přejděte do adresáře projektu:
-    ```sh
-    cd jasnikSite/JasnikSite
-    ```
-3. Vytvořte a aktivujte virtuální prostředí:
+2. Vytvořte a aktivujte virtuální prostředí:
     ```sh
     python -m venv venv
-    source venv/bin/activate  # Na Windows použijte `venv\Scripts\activate`
     ```
-4. Nainstalujte požadované balíčky:
+3. Nainstalujte požadované balíčky:
     ```sh
     pip install -r requirements.txt
     ```
@@ -31,7 +25,7 @@ Tento projekt je jednoduchá webová aplikace postavená na Flask frameworku, kt
 
 1. Spusťte aplikaci:
     ```sh
-    python app.py
+    flask run
     ```
 2. Otevřete webový prohlížeč a přejděte na adresu:
     ```
@@ -41,5 +35,5 @@ Tento projekt je jednoduchá webová aplikace postavená na Flask frameworku, kt
 ## Použití
 
 - Na hlavní stránce se zobrazí seznam uživatelů.
-- Přidání nového uživatele je možné přes formulář na `/add`.
+- Přidání nového uživatele je možné pomocí add
 - Smazání uživatele je možné kliknutím na odkaz "Smazat" vedle uživatele.
